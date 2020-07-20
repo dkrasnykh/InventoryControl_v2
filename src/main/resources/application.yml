@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/inventory_control?createDatabaseIfNotExist=true&useUnicode=true&serverTimezone=UTC
+    username: root
+    password: 1111
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        use_sql_comments: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+
+jwt:
+  secret: secret
